@@ -1,6 +1,116 @@
+<!--
+HTML5 Tags Overview (Bullet Points)
+- <div>: A generic container used to group elements for styling or scripting purposes. Not semantically meaningful.
+- <section>: Represents a themed group of content, usually with a heading.
+- <article>: Contains self-contained, independent content that can stand alone (like blog posts or news articles).
+- <header>: Defines the introductory content or navigational links for a section or the entire page.
+- <footer>: Represents the footer of a section or page, commonly including copyright or contact info.
+- <aside>: Used for additional information, like side notes or glossary entries—related but not central to the main content.
+- <figure> & <figcaption>: Encapsulate visual media with an optional caption to describe the image.
+- <nav>: A semantic container for navigational links.
+- <audio>: Embeds sound content like music or podcasts with fallback support.
+- <canvas>: A drawable region defined in HTML, rendered using JavaScript.
+- <video> & <track>: Used to embed videos and provide subtitle or caption tracks for accessibility.
+-->
 
+<!-- <div>: A generic container used to group elements for styling or scripting purposes -->
 <div>
   <h1>This is a heading in a div element</h1>
   <p>This is some text in a div element.</p>
 </div>
 
+<!-- <section>: Represents a themed group of content, usually with a heading -->
+<section>
+    <h1>Section 1</h1>
+    <p>This is text related to section 1.</p>
+</section>
+
+<section>
+    <h1>Section 2</h1>
+    <p>This is some text related to section 2.</p>
+</section>
+
+<!-- <article>: Contains self-contained, independent content that can stand alone -->
+<article>
+    <h1>Article 1</h1>
+    <p>This content is meaningful on its own and related only to article one.</p>
+</article>
+
+<article>
+    <h1>Article 2</h1>
+    <p>This content is also self-contained and specific to article two.</p>
+</article>
+
+<!-- Full structure using <article>, <header>, <section>, and <footer> -->
+<article>
+    <!-- <header>: Defines the introductory content or navigational links for this article -->
+    <header>
+        <h1>G8 summit protests</h1>
+    </header>
+    <div>
+        <!-- <section>: Grouping subtopics under the article -->
+        <section id="public">
+            <h1>Public demonstrations</h1>
+            <p>...more...</p>                
+        </section>
+        <section id="control">
+            <h1>Crowd control</h1>
+            <p>...more...</p>                
+        </section>            
+    </div>
+    <!-- <footer>: Represents the footer of a section or page -->
+    <footer>
+        <p>Published today.</p>
+    </footer>
+</article>
+
+<!-- <aside>: Used for additional information related to the main content -->
+<p>This paragraph introduces a concept...</p>
+
+<aside>
+    <h4>Concept Definition</h4>
+    <p>This side note explains the concept further without disrupting the main text.</p>
+</aside>
+
+<!-- <figure> & <figcaption>: Encapsulate visual media with a caption -->
+<figure>
+  <img src="images/IDSNlogo.png" width="500" height="500" alt="IBM Developer Skills Network Logo"/>
+  <figcaption>IBM Developer Skills Network Logo</figcaption>
+</figure>
+
+<!-- <nav>: A semantic container for navigational links -->
+<nav>
+    <div class="menu">
+        <a href="#">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="register.html">Register</a> |
+        <a href="#">Sign in</a>
+    </div>
+</nav>
+
+<!-- <audio>: Embeds sound content like music or podcasts -->
+<audio controls>
+  <source src="soundtrack.mp3" type="audio/mpeg">
+  <source src="soundtrack.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- <canvas>: A drawable region defined in HTML, rendered using JavaScript -->
+<canvas>
+    Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+    // Using JavaScript to draw a simple shape on the canvas
+    var canvas = document.getElementsByTagName("canvas")[0];
+    var context = canvas.getContext("2d");
+    context.fillRect(0, 0, 100, 100); // Draws a filled square
+</script>
+
+<!-- <video> & <track>: Embed videos and provide subtitles or captions -->
+<video controls>
+  <source src="common_html_elements.mp4" type="video/mp4">
+  <track src="english_subtitles.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="spanish_subtitles.vtt" kind="subtitles" srclang="es" label="Spanish">
+  Your browser does not support the video tag.
+</video>
