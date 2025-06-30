@@ -1,61 +1,71 @@
-# Frontend Playground
+# 🚀 From Zero to Fullstack
 
-A personal frontend development playground for learning and experimenting with **HTML**, **CSS**, **JavaScript**, and **React**.  
-This repository contains hands-on exercises, mini-projects, and practice code to build strong fundamentals in modern frontend technologies.
-
----
-
-## 📁 Folder Structure
-frontend-playground/
-
-├── html/ # Basic HTML structure and practice
-
-├── css/ # Styling exercises and layout techniques
-
-├── javascript/ # Vanilla JavaScript projects and exercises
-
-├── react/ # React projects and component practice
-
-└── README.md # Project documentation
+Welcome to my journey through the **Fullstack Developer Path** – a comprehensive program designed to take me from foundational web development skills to advanced full-stack engineering. This repository documents everything I learn, build, and reflect on as I grow into a confident developer ready for real-world challenges.
 
 ---
 
-## 🚀 Goals
+## 🧠 About the Course
 
-- Strengthen core frontend skills
-- Build small, functional UIs
-- Practice responsive design and accessibility
-- Understand and apply React fundamentals
+> **Platform:** [Scrimba]  
+> **Level:** Beginner to Pro  
+> **Duration:** 105.8 hours  
+> **Focus:** Hireable skills across the JavaScript ecosystem (HTML, CSS, JS, React, Node, Express, Next, AI Engineering, and more)
 
 ---
 
-## 📌 Notes
+## 📚 Course Sections
 
-This repository is for educational purposes and personal growth.  
-Each folder contain:
-- Code snippets
+Each folder in this repository corresponds to a module from the course. Inside each, you’ll find:
 - Mini-projects
-- Notes or explanations
+- Notes and concepts
+- Code challenges and solutions
+- Reflective takeaways
+
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Skills I'm Building
 
-- HTML5
-- CSS3 (Flexbox, Grid, Media Queries)
-- JavaScript (ES6+)
-- React (Hooks, JSX, Components)
+- HTML5, CSS3, and responsive layouts
+- JavaScript (ES6+), async programming
+- UI/UX principles and accessibility
+- REST APIs and async data handling
+- AI engineering basics with JavaScript
+- Node.js, Express.js, MongoDB
+- React.js (Fundamentals + Advanced)
+- TypeScript and Next.js
+- Testing & Debugging
+- Career preparation and portfolio building
 
 ---
 
-## 🔄 Updates
+## 📈 Progress Tracker
 
-This repo will be updated regularly as I progress through new topics and challenges.
+| Module                        | Status     |
+|------------------------------|------------|
+| HTML and CSS Fundamentals    | ⏳ In Progress |
+| JavaScript Fundamentals      | ⏳ In Progress |
+| ...                          | 🔒 Coming Soon |
+| Launching Your Career        | 🔒 Coming Soon |
+
+> I’ll update the status of each section as I progress through the path.
 
 ---
 
-## 📬 Contact
+## 🎯 Goal
 
-If you'd like to share ideas or feedback, feel free to connect!
+To **build a portfolio** of practical, real-world projects while mastering the modern fullstack JavaScript ecosystem – and ultimately land a role as a capable **Fullstack Developer**.
+
+---
+
+## 📃 Certificate of Completion
+
+Will be added here once I complete all modules. Stay tuned!
+
+---
+
+Thanks for checking out my journey — feel free to explore, clone, or connect with me if you're on a similar path!
+
+> **Let’s connect on [LinkedIn](https://www.linkedin.com/in/muhammad-umar-k)**
 
 
