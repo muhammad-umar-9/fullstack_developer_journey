@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Advanced Blackjack Game</title>
+    </head>
+    <body>
+        <h1>🂡 Advanced Blackjack 🂡</h1>
+        
+        <!-- Player Info Section -->
+        <div class="player-info">
+            <p id="player-el"></p>
+            <p id="stats-el"></p>
+        </div>
+        
+        <!-- Betting Section -->
+        <div class="betting-section">
+            <label for="bet-input">Place Your Bet: $</label>
+            <input type="number" id="bet-input" min="1" max="500" value="10">
+            <p id="bet-el">Current Bet: $0</p>
+        </div>
+        
+        <!-- Game Status -->
+        <p id="message-el">Place a bet and start the game!</p>
+        
+        <!-- Cards Display -->
+        <div class="cards-section">
+            <div class="player-cards">
+                <p id="cards-el">Your Cards:</p>
+                <p id="sum-el">Your Sum:</p>
+            </div>
+            
+            <div class="dealer-cards">
+                <p id="dealer-cards-el">Dealer Cards:</p>
+                <p id="dealer-sum-el">Dealer Sum:</p>
+            </div>
+        </div>
+        
+        <!-- Game Controls -->
+        <div class="controls">
+            <button onclick="startGame()">START GAME</button>
+            <button onclick="newCard()">HIT</button>
+            <button onclick="stand()">STAND</button>
+            <button onclick="resetGame()">RESET GAME</button>
+        </div>
+        
+        <!-- Game History -->
+        <div id="history-el"></div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
