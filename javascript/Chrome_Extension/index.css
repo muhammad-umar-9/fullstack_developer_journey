@@ -1,1 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 450px;
+    max-width: 450px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #718096;
+    opacity: 0.8;
+}
+
+.input-section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.search-section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+#export-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    font-size: 11px;
+    flex: none;
+    width: auto;
+}
+
+.leads-container {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 0 20px;
+    border-radius: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background: #f7fafc;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.lead-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.lead-url {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.lead-url:hover {
+    text-decoration: underline;
+}
+
+.lead-date {
+    font-size: 11px;
+    color: #a0aec0;
+}
+
+.lead-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn, .delete-single-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.edit-btn:hover {
+    background: #e2e8f0;
+}
+
+.delete-single-btn:hover {
+    background: #fed7d7;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+#delete-btn {
+    background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+    font-size: 12px;
+    width: 100%;
+}
+
+#delete-btn:hover {
+    box-shadow: 0 4px 15px rgba(245, 101, 101, 0.3);
+}
+
+.no-leads {
+    text-align: center;
+    padding: 40px 20px;
+    color: #a0aec0;
+}
+
+.no-leads-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+/* Scrollbar styling */
+.leads-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leads-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.leads-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.leads-container::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Edit mode styles */
+.edit-input {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.save-edit-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.cancel-edit-btn {
+    background: #a0aec0;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+
 
