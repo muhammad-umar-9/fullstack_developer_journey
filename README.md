@@ -43,8 +43,9 @@ Each folder in this repository corresponds to a module from the course. Inside e
 
 | Module                        | Status     |
 |------------------------------|------------|
-| HTML and CSS Fundamentals    | ⏳ In Progress |
-| JavaScript Fundamentals      | ⏳ In Progress |
+| HTML and CSS Fundamentals    | ✅ Completed  |
+| JavaScript Fundamentals      | ✅ Completed  |
+| Essential  JavaScript        | ⏳ In Progress |
 | ...                          | 🔒 Coming Soon |
 | Launching Your Career        | 🔒 Coming Soon |
 
