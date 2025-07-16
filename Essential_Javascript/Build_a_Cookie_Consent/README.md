@@ -4,7 +4,7 @@
 ## Project Overview
 This project is a humorous take on cookie consent modals, featuring a fake "data collection" interface that demonstrates various JavaScript concepts and CSS techniques. The project simulates a sketchy website that tricks users into accepting terms and conditions.
 
-## 🎯 Learning Objectives Achieved
+##  Learning Objectives Achieved
 
 ### JavaScript Concepts
 
@@ -98,7 +98,7 @@ modalCloseBtn.disabled = false
 }
 ```
 
-## 💡 Key Learning Takeaways
+##  Key Learning Takeaways
 1. **Timing in UX**: How `setTimeout()` creates realistic user experiences
 2. **Form Handling**: Modern approaches to form data extraction
 3. **CSS Flexbox**: Dynamic layout changes with `row-reverse`
@@ -106,6 +106,6 @@ modalCloseBtn.disabled = false
 5. **DOM Manipulation**: Direct style changes vs. class toggling
 6. **Accessibility**: Proper use of disabled attributes
 
-## 🎯 Next Project
+##  Next Project
 Moving on to **Build a Meme App** to continue learning advanced JavaScript concepts and API integration!
 
