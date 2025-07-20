@@ -7,10 +7,27 @@ html, body {
 
 /* typography and icons */
 
+.header-content {
+    text-align: center;
+    padding: 10px 0;
+}
+
 h1{
-    color: #0F8CDF;
-    margin-bottom: 10px;
-    font-size: 20px;
+    color: #1d9bf0;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-subtitle {
+    color: #657786;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
 }
 
 i{
@@ -140,6 +157,7 @@ button:disabled {
     width: 100%;
     margin: 0;
     transition: background-color 0.2s ease;
+    position: relative;
 }
 
 .tweet:hover {
@@ -152,11 +170,43 @@ button:disabled {
     gap: 12px;
 }
 
+.tweet-content {
+    flex: 1;
+}
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.delete-btn {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tweet:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn i {
+    color: #657786;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.delete-btn i:hover {
+    color: #e0245e;
+    background-color: rgba(224, 36, 94, 0.1);
+}
+
 .tweet-details{
     display: flex;
     font-size: 13px;
     justify-content: space-between;
-    width: 160px;
+    width: 180px;
     margin-top: 8px;
 }
 
@@ -165,8 +215,8 @@ button:disabled {
     gap: 4px;
     align-items: center;
     cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 4px 8px;
+    border-radius: 12px;
     transition: background-color 0.2s ease;
 }
 
@@ -220,7 +270,156 @@ button:disabled {
     margin: 0;
 }
 
+/* Reply form styling */
+.reply-form {
+    padding: 16px;
+    background-color: #f7f9fa;
+    border-radius: 8px;
+    margin: 12px 0;
+    border: 1px solid #e1e8ed;
+}
+
+.reply-input-area {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.reply-input-container {
+    flex: 1;
+}
+
+.reply-input-container textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px 12px;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.reply-input-container textarea:focus {
+    outline: none;
+    border-color: #1d9bf0;
+    box-shadow: 0 0 0 1px #1d9bf0;
+}
+
+.reply-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.reply-btn, .cancel-reply {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reply-btn {
+    background-color: #1d9bf0;
+    color: white;
+}
+
+.reply-btn:hover {
+    background-color: #1a91da;
+}
+
+.cancel-reply {
+    background-color: transparent;
+    color: #536471;
+    border: 1px solid #e1e8ed;
+}
+
+.cancel-reply:hover {
+    background-color: #f7f9fa;
+    border-color: #657786;
+}
+
+/* Improved main layout */
+main {
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto 0;
+    background-color: white;
+    padding: 20px 20px 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Better responsive design */
+@media (max-width: 640px) {
+    main, header {
+        width: 95%;
+        padding: 16px;
+        margin: 10px auto;
+    }
+    
+    .tweet-details {
+        width: 150px;
+    }
+    
+    .reply-input-area {
+        gap: 8px;
+    }
+}
+
 /* utility */
 .hidden{
     display: none;
+}
+
+/* Footer styling */
+.app-footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #e1e8ed;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #657786;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stat-item i {
+    font-size: 14px;
+    color: #1d9bf0;
+}
+
+.footer-text {
+    color: #657786;
+    font-size: 12px;
+    margin: 0;
+    font-style: italic;
 }
