@@ -4,7 +4,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="index.css">
 	<!-- Font Awesome CDN -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,10 @@
 
 <body> 
 	<header>
-		<h1>Twimba</h1>
+		<div class="header-content">
+			<h1><i class="fa-brands fa-twitter"></i> Twimba</h1>
+			<p class="header-subtitle">Share your thoughts with the world</p>
+		</div>
 	</header>
 	<main>
 		<div class="tweet-input-area">
@@ -29,6 +32,23 @@
 		<div class="feed" id="feed">
 			<!-- Tweets here!! -->
 		</div>
+		<footer class="app-footer">
+			<div class="stats">
+				<span class="stat-item">
+					<i class="fa-solid fa-chart-simple"></i>
+					<span id="total-tweets">0</span> Tweets
+				</span>
+				<span class="stat-item">
+					<i class="fa-solid fa-heart"></i>
+					<span id="total-likes">0</span> Likes
+				</span>
+				<span class="stat-item">
+					<i class="fa-solid fa-retweet"></i>
+					<span id="total-retweets">0</span> Retweets
+				</span>
+			</div>
+			<p class="footer-text">Data saved locally in your browser</p>
+		</footer>
 	</main>
 	<script src="index.js" type="module"></script>
 </body>
