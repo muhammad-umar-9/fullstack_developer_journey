@@ -45,8 +45,22 @@ Each folder in this repository corresponds to a module from the course. Inside e
 |------------------------------|------------|
 | HTML and CSS Fundamentals    | ✅ Completed  |
 | JavaScript Fundamentals      | ✅ Completed  |
-| Essential  JavaScript        | ⏳ In Progress |
-| ...                          | 🔒 Coming Soon |
+| Tools of The Trade           | ✅ Completed  |
+| Accessible Development       | ✅ Completed  |
+| Essential CSS                | ✅ Completed  |
+| Essential  JavaScript        | ✅ Completed |
+| Responsive Design            | ⏳ In Progress |
+| APIS and Async Javascript    | 🔒 Coming Soon |
+| AI Engneering                | 🔒 Coming Soon |
+| Node.js                      | 🔒 Coming Soon |
+| Databases                    | 🔒 Coming Soon |
+| Express.js                   | 🔒 Coming Soon |
+| User Interface Design        | 🔒 Coming Soon |
+| React.js Fundamnentals       | 🔒 Coming Soon |
+| Testing                      | 🔒 Coming Soon |
+| Advanced React.js            | 🔒 Coming Soon |
+| TypeScript                   | 🔒 Coming Soon |
+| Next.js                      | 🔒 Coming Soon |
 | Launching Your Career        | 🔒 Coming Soon |
 
 > I’ll update the status of each section as I progress through the path.
