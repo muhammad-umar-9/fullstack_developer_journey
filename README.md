@@ -48,9 +48,9 @@ Each folder in this repository corresponds to a module from the course. Inside e
 | Tools of The Trade           | ✅ Completed  |
 | Accessible Development       | ✅ Completed  |
 | Essential CSS                | ✅ Completed  |
-| Essential  JavaScript        | ✅ Completed |
-| Responsive Design            | ⏳ In Progress |
-| APIS and Async Javascript    | 🔒 Coming Soon |
+| Essential  JavaScript        | ✅ Completed  |
+| Responsive Design            | ✅ Completed  |
+| APIS and Async Javascript    | ⏳ In Progress |
 | AI Engneering                | 🔒 Coming Soon |
 | Node.js                      | 🔒 Coming Soon |
 | Databases                    | 🔒 Coming Soon |
