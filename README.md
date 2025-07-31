@@ -50,8 +50,8 @@ Each folder in this repository corresponds to a module from the course. Inside e
 | Essential CSS                | ✅ Completed  |
 | Essential  JavaScript        | ✅ Completed  |
 | Responsive Design            | ✅ Completed  |
-| APIS and Async Javascript    | ⏳ In Progress |
-| AI Engneering                | 🔒 Coming Soon |
+| APIS and Async Javascript    | ✅ Completed  |
+| AI Engneering                | ⏳ In Progress |
 | Node.js                      | 🔒 Coming Soon |
 | Databases                    | 🔒 Coming Soon |
 | Express.js                   | 🔒 Coming Soon |
