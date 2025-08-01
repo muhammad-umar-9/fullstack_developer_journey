@@ -4,7 +4,7 @@ import { renderNewMessage } from "./dom.js"
 
 // Initialize the Groq client for browser usage
 export const groq = new Groq({
-    apiKey: import.meta.env.VITE_GROQ_API_KEY || 'VITE_GROK_API_KEY',
+    apiKey: import.meta.env.VITE_GROQ_API_KEY,
     dangerouslyAllowBrowser: true
 })
 
@@ -27,6 +27,7 @@ const messages = [
 
 async function agent(query) {
     try {
+        console.log("API Key loaded:", !!import.meta.env.VITE_GROQ_API_KEY)
         messages.push(
             {   
                 role: "user", 
@@ -36,7 +37,7 @@ async function agent(query) {
         renderNewMessage(query, "user")
 
         // Show loading message
-        const loadingMsg = "🤔 After confirming let you know that..."
+        const loadingMsg = "🤔 Let me check that for you..."
         renderNewMessage(loadingMsg, "assistant")
 
         const response = await groq.chat.completions.create(
@@ -57,6 +58,7 @@ async function agent(query) {
         )),
             tool_choice: "auto"
         })
+        console.log("AI Response:", response.choices[0].message)
 
         // Remove loading message
         const conversation = document.getElementById("conversation")
@@ -66,12 +68,16 @@ async function agent(query) {
 
         // Handle tool calls if present
         if (responseMessage.tool_calls) {
+            console.log("Tool calls detected:", responseMessage.tool_calls)
             for (const toolCall of responseMessage.tool_calls) {
                 const functionName = toolCall.function.name
                 const functionArgs = JSON.parse(toolCall.function.arguments)
+
+                console.log(`Calling function: ${functionName} with args:`, functionArgs)
                 
                 if (availableFunctions[functionName]) {
                     const result = await availableFunctions[functionName](functionArgs)
+                    console.log(`Function ${functionName} result:`, result)
                     messages.push({
                         role: "tool",
                         tool_call_id: toolCall.id,
