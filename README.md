@@ -52,8 +52,8 @@ Each folder in this repository corresponds to a module from the course. Inside e
 | Responsive Design            | ✅ Completed  |
 | APIS and Async Javascript    | ✅ Completed  |
 | AI Engneering                | ✅ Completed  |
-| Node.js                      | ⏳ In Progress |
-| Databases                    | 🔒 Coming Soon |
+| Node.js                      | ✅ Completed  |
+| Databases                    | ⏳ In Progress |
 | Express.js                   | 🔒 Coming Soon |
 | User Interface Design        | 🔒 Coming Soon |
 | React.js Fundamnentals       | 🔒 Coming Soon |
