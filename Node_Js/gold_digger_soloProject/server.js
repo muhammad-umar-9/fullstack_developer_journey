@@ -5,7 +5,22 @@ import url from 'node:url';  // for parsing urls
 
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url)); // gives us current directory path name
-
+function serveStaticFile(res , filePath , contentType){
+    fs.readFile(filePath , (err , data) => {
+    if(err)
+    {
+        res.statusCode = 500;
+        res.end('server error');
+        return;
+    }
+    else
+    {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', contentType)
+        res.end(data);
+    }
+})
+}
 
 const PORT = 3000;
 const server = http.createServer((req , res) => 
@@ -16,58 +31,17 @@ const server = http.createServer((req , res) =>
     if (pathName == '/'  || pathName == '/index.html')
     {
         const filePath = path.join(__dirname , 'public' , 'index.html')
-        console.log('looking for file at:' , filePath)
-        fs.readFile(filePath , (err , data) => {
-            if(err)
-                {
-                    console.log('file read error: ' , err.message)
-                    res.statusCode = 500; // server error
-                    res.end('error loading page');
-                    return;
-                }
-            else
-                {
-                    res.statusCode = 200  // success
-                    res.setHeader('Content-Type', 'text/html');
-                    res.end(data);
-                }
-            });
+        serveStaticFile(res , filePath , 'text/html')
     }
     else if(pathName == '/index.css')
             {
                 const filePath = path.join(__dirname , 'public' , 'index.css')
-                fs.readFile(filePath , (err , data) => {
-                    if(err)
-                    {
-                        res.statusCode = 500 ;
-                        res.end('server error');
-                        return;
-                    }
-                    else
-                    {
-                        res.statusCode = 200;
-                        res.setHeader('Content-Type' , 'text/css');
-                        res.end(data);
-                    }
-                });
+                serveStaticFile(res , filePath , 'text/CSS')
             }
         else if(pathName == '/gold.png')
             {
                 const filePath = path.join(__dirname , 'public' , 'gold.png')
-                fs.readFile(filePath , (err , data) => {
-                    if(err)
-                    {
-                        res.statusCode = 500;
-                        res.end('server error');
-                        return;
-                    }
-                    else
-                    {
-                        res.statusCode = 200;
-                        res.setHeader('Content-Type', 'image/png');
-                        res.end(data);
-                    }
-                });
+                serveStaticFile(res , filePath , 'image/png')
             }
         else
             {
