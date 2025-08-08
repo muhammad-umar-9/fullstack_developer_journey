@@ -56,52 +56,11 @@ const server = http.createServer((req , res) =>
 
     else if(pathName == '/api/gold-price')
     {
-        const goldPrice = CURRENT_GOLD_PRICE
-        const responseData = {
-            price: goldPrice,
-            currency: "GBP",
-            unit:"per troy ounce",
-            timeStamp: new Date().toISOString()
-        };
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify(responseData));
+       handleGoldPriceAPI(req , res);
     }
     else if(pathName == '/api/invest' && method == 'POST')
     {
-        let body = '';
-        req.on('data' , (chunk)  => {
-            body += chunk.toString();
-        });
-
-        req.on('end' , () => {
-            try 
-            {
-                const investmentData = JSON.parse(body);
-                const amount = parseFloat(investmentData.amount);
-                const goldPrice = CURRENT_GOLD_PRICE;
-
-                const ounces = amount / goldPrice;
-
-                const response = {
-                    success: true ,
-                    investmentAmount : amount ,
-                    pricePerOunce : goldPrice ,
-                    ouncesOwned : ounces.toFixed(3) ,
-                    message : `you bought ${ounces.toFixed(3)} for ${amount}`
-                };
-
-                res.statusCode = 200;
-                res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify(response));
-            }
-            catch(error)
-            {
-                res.statusCode = 400;
-                res.end('Invalid data');
-
-            }
-        })
+        handleInvestmentAPI(req , res);    
     }    
 
         else
