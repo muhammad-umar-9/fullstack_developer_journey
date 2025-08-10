@@ -18,44 +18,68 @@
     <main>
         <h1 class="title">GoldDigger</h1>
         <img src="gold.png" alt="gold bars and nuggets">
-        
+
         <section class="price-info-container">
-            <div class="currency-selector">
-                <label for="currency-select">Currency:</label>
-                <select id="currency-select">
-                    <option value="GBP">GBP (£)</option>
-                    <option value="USD">USD ($)</option>
-                    <option value="EUR">EUR (€)</option>
-                </select>
+            <div class="price-display-section">
+                <div class="currency-selector">
+                    <label for="currency-select">Currency:</label>
+                    <select id="currency-select">
+                        <option value="GBP">GBP (£)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <div class="price-label">Live Gold Price</div>
+                    <div class="price-display">
+                        <span id="currency-symbol">£</span><span id="price-display" aria-live="assertive">----.--</span>
+                        <span class="unit"> / oz</span>
+                    </div>
+                </div>
             </div>
-            <p>£<span id="price-display" class="price" aria-live="assertive">----.--</span> / Oz*</p>
-            <p id="connection-status" class="status" aria-live="polite">Live Price 🟢</p>
-            <button id = "refresh-price-btn" class="refresh-btn" aria-label="Refresh Gold Price"> 🔄 Refresh Price </button>
+            <div class="price-controls">
+                <button id="refresh-price-btn" class="refresh-btn" aria-label="Refresh Gold Price">
+                    🔄 Refresh Price
+                </button>
+            </div>
+            <div id="connection-status" class="status" aria-live="polite">
+                Live Price 🟢
+            </div>
         </section>
-        
+
         <form>
             <label for="investment-amount">Amount to invest</label>
             <div class="input-container">
-                <div class="currency"  id="investment-currency">£</div>
-                <input type="number" id="investment-amount" placeholder="100.00" required>
+                <div class="currency" id="investment-currency">£</div>
+                <input type="number" id="investment-amount" placeholder="100.00" required step="0.01" min="1">
             </div>
-            <button id="invest-btn" class="invest-btn" aria-label="Invest in gold now">Invest Now!</button>
+            <button type="submit" id="invest-btn" class="invest-btn" aria-label="Invest in gold now">
+                💰 Invest Now!
+            </button>
         </form>
-        <!-- This dialog opens after a successful purchase -->
-        <dialog class="outputs" role="dialog" aria-labelledby="dialog-title" aria-describedby="investment-summary" lang="en">
-            <h2>Summary</h2>
-            <p id="investment-summary">You just bought 1.3 ounces (ozt) for £3000. \n You will receive documentation shortly.</p>
-                <button aria-label="Close dialog and return to main page" autofocus>OK</button>
-        </dialog>
-        <p class="footnote">* 1oz = 1 troy ounce of 24 Carat Gold</p>
-    </div>
+
         <section class="history-section">
-            <h2>Investment History</h2>
-            <button id="clear-history-btn" class="clear-btn">Clear History</button>
-                <div id="history-list">
-                    <p class="no-history">No investments yet. Make your first investment! </p>
-                </div>
+            <div class="history-header">
+                <h3 class="history-title">📈 Investment History</h3>
+                <button id="clear-history-btn" class="clear-btn" aria-label="Clear investment history">
+                    Clear History
+                </button>
+            </div>
+            <div id="history-list">
+                <p class="no-history">No investments yet. Make your first investment!</p>
+            </div>
         </section>
+
+        <!-- This dialog opens after a successful purchase -->
+        <dialog class="outputs" role="dialog" aria-labelledby="dialog-title" aria-describedby="investment-summary">
+            <h2 id="dialog-title">🎉 Investment Success!</h2>
+            <p id="investment-summary">You just bought 1.3 ounces (ozt) for £3000. You will receive documentation shortly.</p>
+            <button aria-label="Close dialog and return to main page" autofocus>Got it!</button>
+        </dialog>
+
+        <div class="footnote">
+            * 1 oz = 1 troy ounce of 24 Carat Gold. Prices are indicative and may vary.
+        </div>
     </main>
 
     <script type="module" src="index.js"></script>
