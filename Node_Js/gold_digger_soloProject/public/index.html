@@ -18,14 +18,25 @@
     <main>
         <h1 class="title">GoldDigger</h1>
         <img src="gold.png" alt="gold bars and nuggets">
+        
         <section class="price-info-container">
+            <div class="currency-selector">
+                <label for="currency-select">Currency:</label>
+                <select id="currency-select">
+                    <option value="GBP">GBP (£)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                </select>
+            </div>
             <p>£<span id="price-display" class="price" aria-live="assertive">----.--</span> / Oz*</p>
             <p id="connection-status" class="status" aria-live="polite">Live Price 🟢</p>
+            <button id = "refresh-price-btn" class="refresh-btn" aria-label="Refresh Gold Price"> 🔄 Refresh Price </button>
         </section>
+        
         <form>
             <label for="investment-amount">Amount to invest</label>
             <div class="input-container">
-                <div class="currency">£</div>
+                <div class="currency"  id="investment-currency">£</div>
                 <input type="number" id="investment-amount" placeholder="100.00" required>
             </div>
             <button id="invest-btn" class="invest-btn" aria-label="Invest in gold now">Invest Now!</button>
@@ -38,6 +49,13 @@
         </dialog>
         <p class="footnote">* 1oz = 1 troy ounce of 24 Carat Gold</p>
     </div>
+        <section class="history-section">
+            <h2>Investment History</h2>
+            <button id="clear-history-btn" class="clear-btn">Clear History</button>
+                <div id="history-list">
+                    <p class="no-history">No investments yet. Make your first investment! </p>
+                </div>
+        </section>
     </main>
 
     <script type="module" src="index.js"></script>
