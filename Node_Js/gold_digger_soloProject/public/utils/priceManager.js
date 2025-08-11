@@ -1,8 +1,10 @@
-export async function loadGoldPrice()
+import { getCurrentCurrency , getCurrencySymbol } from "./currencyManager.js";
+export async function loadGoldPrice(currency = null)
 {
     try
     {
-        const response =  await fetch('/api/gold-price');
+        const selectedCurrency = currency || getCurrentCurrency();
+        const response =  await fetch(`/api/gold-price?currency=${selectedCurrency}`);
         const data = await response.json();
         document.getElementById('price-display').textContent = data.price;
 
@@ -48,4 +50,14 @@ export async function handlePriceRefresh()
         refreshBtn.disabled = false;
         refreshBtn.textContent = '🔄 Refresh Price';
     }
+}
+export async function handleCurrencyChange() {
+    const currency = getCurrentCurrency();
+    
+    // Update UI symbols first
+    const { updateCurrencySymbols } = await import('./currencyManager.js');
+    updateCurrencySymbols(currency);
+    
+    // Load new price for selected currency
+    await loadGoldPrice(currency);
 }
