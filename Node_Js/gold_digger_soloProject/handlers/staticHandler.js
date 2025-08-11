@@ -43,7 +43,28 @@ export function handleStaticFiles(req, res, pathname, __dirname) {
         '/test-api.html': { 
             file: 'test-api.html',
              type: 'text/html' 
-            }
+            },
+        '/utils/priceManager.js': 
+        { 
+            file: 'utils/priceManager.js',
+            type: 'application/javascript' 
+        },
+        '/utils/historyManager.js': 
+        {
+                file: 'utils/historyManager.js', 
+                type: 'application/javascript'
+        },
+        '/utils/investmentManager.js': 
+        {
+        file: 'utils/investmentManager.js', 
+        type: 'application/javascript'
+        }
+        ,
+        '/utils/currencyManager.js': 
+        { 
+        file: 'utils/currencyManager.js', 
+        type: 'application/javascript' 
+        }
     };
     const route = staticRoutes[pathname];
     if (route) {
