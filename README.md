@@ -54,8 +54,8 @@ Each folder in this repository corresponds to a module from the course. Inside e
 | AI Engneering                | ✅ Completed  |
 | Node.js                      | ✅ Completed  |
 | Databases                    | ✅ Completed |
-| Express.js                   | ⏳ In Progress |
-| User Interface Design        | 🔒 Coming Soon |
+| Express.js                   | ✅ Completed |
+| User Interface Design        | ⏳ In Progress |
 | React.js Fundamnentals       | 🔒 Coming Soon |
 | Testing                      | 🔒 Coming Soon |
 | Advanced React.js            | 🔒 Coming Soon |
