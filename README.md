@@ -57,8 +57,8 @@ Each folder in this repository corresponds to a module from the course. Inside e
 | Express.js                   | ✅ Completed |
 | User Interface Design        | ✅ Completed |
 | React.js Fundamnentals       | ✅ Completed  |
-| Testing                      | ⏳ In Progress |
-| Advanced React.js            | 🔒 Coming Soon |
+| Testing                      | ✅ Completed |
+| Advanced React.js            | ⏳ In Progress |
 | TypeScript                   | 🔒 Coming Soon |
 | Next.js                      | 🔒 Coming Soon |
 | Launching Your Career        | 🔒 Coming Soon |
